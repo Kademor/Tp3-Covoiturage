@@ -29,5 +29,7 @@ namespace ProjetCovoiturage.Models
         {
             return new ApplicationDbContext();
         }
+
+        public virtual DbSet<Chauffeur> Chauffeur { get; set; }
     }
 }

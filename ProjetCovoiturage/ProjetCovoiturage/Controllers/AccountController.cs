@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using ProjetCovoiturage.Models;
@@ -17,9 +18,13 @@ namespace ProjetCovoiturage.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        ApplicationDbContext bd;
+    
 
         public AccountController()
         {
+            bd = new ApplicationDbContext();
+
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
@@ -137,7 +142,7 @@ namespace ProjetCovoiturage.Controllers
         //
         // GET: /Account/Register
         [AllowAnonymous]
-        public ActionResult Register()
+        public ActionResult RegisterChauffeur()
         {
             return View();
         }
@@ -147,7 +152,7 @@ namespace ProjetCovoiturage.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register(RegisterViewModel model)
+        public async Task<ActionResult> RegisterChauffeur(RegisterViewModelChauffeur model)
         {
             if (ModelState.IsValid)
             {
@@ -155,6 +160,21 @@ namespace ProjetCovoiturage.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    var currentUser = UserManager.Users.Where(x => x.Email == model.Email).FirstOrDefault();
+                    
+                   
+                    bd.Chauffeur.Add(new Chauffeur { Id = currentUser.Id, Prenom = model.Prenom, Nom = model.Nom, DateEmbauche = model.DateEmbauche, DateEnRoute = model.DateEnRoute, DatePermis = model.DatePermis, NbPlace = model.NbPlace, NumeroPermis = model.NumeroPermis, NumeroTelephone = model.NumeroTelephone, VehiculeModel = model.VehiculeModel, Ville = model.Ville });
+                    bd.SaveChanges();
+                    var roleManager = new RoleManager<IdentityRole>(new
+                   RoleStore<IdentityRole>(new ApplicationDbContext()));
+                    if (!roleManager.RoleExists("Chauffeur"))
+                    {
+                        var role = new IdentityRole();
+                        role.Name = "Chauffeur";
+                        roleManager.Create(role);
+                    }
+                    // Attribution du rôle
+                    var addRole = await UserManager.AddToRoleAsync(user.Id, "Chauffeur");
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
                     // Pour plus d'informations sur l'activation de la confirmation de compte et de la réinitialisation de mot de passe, visitez https://go.microsoft.com/fwlink/?LinkID=320771

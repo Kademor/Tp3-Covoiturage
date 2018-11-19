@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace ProjetCovoiturage.Models
@@ -62,13 +63,38 @@ namespace ProjetCovoiturage.Models
         public bool RememberMe { get; set; }
     }
 
-    public class RegisterViewModel
+    public class RegisterViewModelChauffeur
     {
         [Required]
         [EmailAddress]
         [Display(Name = "Courrier électronique")]
         public string Email { get; set; }
-
+        [Required]
+        public string Prenom { get; set; }
+        [Required]
+        public string Nom { get; set; }
+        [Required]
+        public string NumeroPermis { get; set; }
+        [Required]
+        public int NumeroTelephone { get; set; }
+        [Required]
+        public string Ville { get; set; }
+        [Required]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        public DateTime DatePermis { get; set; }
+        [Required]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        public DateTime DateEmbauche { get; set; }
+        [Required]
+        public string VehiculeModel { get; set; }
+        [Required]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        public DateTime DateEnRoute { get; set; }
+        [Required]
+        public int NbPlace { get; set; }
         [Required]
         [StringLength(100, ErrorMessage = "La chaîne {0} doit comporter au moins {2} caractères.", MinimumLength = 6)]
         [DataType(DataType.Password)]
