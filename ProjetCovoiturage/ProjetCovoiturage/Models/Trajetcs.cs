@@ -6,7 +6,7 @@ using System.Web;
 
 namespace ProjetCovoiturage.Models
 {
-    public class Trajet
+    public class Trajetcs
     {
         //chauffeur
         [Key]
@@ -16,10 +16,7 @@ namespace ProjetCovoiturage.Models
         public int mitglied_id { get; set; }
 
 
-        [Range(0,5)]
+        [Range(0, 5)]
         public int noteAppréciation { get; set; }
-
-        
-
     }
 }
