@@ -202,9 +202,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Chauffeur.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\phil.cs" />
+    <Compile Include="Models\test.cs" />
+    <Compile Include="Models\testProf.cs" />
     <Compile Include="Models\Trajetcs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
