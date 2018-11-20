@@ -17,9 +17,9 @@ namespace ProjetCovoiturage.Models
         public string Ville { get; set; }
         public DateTime DatePermis { get; set; }
         public DateTime DateEmbauche { get; set; }
-        //public string VehiculeModel { get; set; }
-        //public DateTime DateEnRoute { get; set; }
-        //public int NbPlace { get; set; }
+        public string VehiculeModel { get; set; }
+        public DateTime DateEnRoute { get; set; }
+        public int NbPlace { get; set; }
 
         public int voitureID { get; set; }
 
