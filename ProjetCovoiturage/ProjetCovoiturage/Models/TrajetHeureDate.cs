@@ -6,7 +6,7 @@ using System.Web;
 
 namespace ProjetCovoiturage.Models
 {
-    public class Trajet
+    public class TrajetHeureDate
     {
         [Key]
         // [Display(Name = "idTrajet", ResourceType = typeof(Resources.Models.Trajet))]
@@ -15,8 +15,7 @@ namespace ProjetCovoiturage.Models
 
 
 
-        public string IdChauffeur { get; set; }
-        public string IdClient { get; set; }
+
         // [Display(Name = "VilleDepart", ResourceType = typeof(Resources.Models.Trajet))]
         // [Required(ErrorMessageResourceName = "VilleDepartError", ErrorMessageResourceType = typeof(Resources.Models.Trajet))]
         public string VilleDepart { get; set; }
@@ -37,12 +36,20 @@ namespace ProjetCovoiturage.Models
         // [Required(ErrorMessageResourceName = "VilleDestinationError", ErrorMessageResourceType = typeof(Resources.Models.Trajet))]
         public string VilleDestination { get; set; }
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd HH:mm}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+      
+        public DateTime DateDepart { get; set; }
+        [DataType(DataType.Time)]
+        [DisplayFormat(DataFormatString = "{0:HH:mm}", ApplyFormatInEditMode = true)]
         //  [Display(Name = "HeureDepart", ResourceType = typeof(Resources.Models.Trajet))]
         //  [Required(ErrorMessageResourceName = "HeureDepartError", ErrorMessageResourceType = typeof(Resources.Models.Trajet))]
         public DateTime HeureDepart { get; set; }
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd HH:mm}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+      
+        public DateTime DateArrivee { get; set; }
+        [DataType(DataType.Time)]
+        [DisplayFormat(DataFormatString = "{0:HH:mm}", ApplyFormatInEditMode = true)]
         // [Display(Name = "HeureArrivee", ResourceType = typeof(Resources.Models.Trajet))]
         // [Required(ErrorMessageResourceName = "HeureArriveError", ErrorMessageResourceType = typeof(Resources.Models.Trajet))]
         public DateTime HeureArrivee { get; set; }
