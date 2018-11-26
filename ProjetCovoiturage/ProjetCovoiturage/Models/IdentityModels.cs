@@ -32,6 +32,9 @@ namespace ProjetCovoiturage.Models
 
         public virtual DbSet<Chauffeur> Chauffeur { get; set; }
 
-        public System.Data.Entity.DbSet<ProjetCovoiturage.Models.Trajet> Trajets { get; set; }
+        public virtual DbSet<Client> Clients { get; set; }
+        public virtual DbSet<Trajet> Trajets { get; set; }
+
+        public virtual DbSet<Voiture> Voitures { get; set; }
     }
 }
