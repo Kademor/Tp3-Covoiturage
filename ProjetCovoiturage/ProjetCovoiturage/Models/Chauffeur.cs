@@ -24,5 +24,6 @@ namespace ProjetCovoiturage.Models
         public int voitureID { get; set; }
 
         public virtual ICollection<Voiture> Voiture { get; set; }
+        public virtual ICollection<NotesChauffeurs> NotesChauffeurs { get; set; }
     }
 }
