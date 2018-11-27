@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetCovoiturage.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -9,10 +10,10 @@ namespace ProjetCovoiturage.DAL
 {
     public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
-        internal CovoiturageContexte context;
+        internal ApplicationDbContext context;
         internal DbSet<TEntity> dbSet;
 
-        public GenericRepository(CovoiturageContexte context)
+        public GenericRepository(ApplicationDbContext context)
         {
             this.context = context;
             dbSet = context.Set<TEntity>();

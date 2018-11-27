@@ -13,9 +13,9 @@ namespace ProjetCovoiturage.DAL
         private GenericRepository<Trajet> trajetRepository;
         private GenericRepository<Voiture> voitureRepository;
 
-        private CovoiturageContexte context = new CovoiturageContexte();
+        private ApplicationDbContext context = new ApplicationDbContext();
 
-        public UnitOfWork(CovoiturageContexte mockContext)
+        public UnitOfWork(ApplicationDbContext mockContext)
         {
             context = mockContext;
         }
