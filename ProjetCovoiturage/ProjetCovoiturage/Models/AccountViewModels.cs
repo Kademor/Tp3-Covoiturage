@@ -62,7 +62,33 @@ namespace ProjetCovoiturage.Models
         [Display(Name = "Mémoriser le mot de passe ?")]
         public bool RememberMe { get; set; }
     }
+    public class RegisterViewModelClient
+    {
+        [Required]
+        [EmailAddress]
+        [Display(Name = "Courrier électronique")]
+        public string Email { get; set; }
+        [Required]
+        public string Firstname { get; set; }
+        [Required]
+        public string Lastname { get; set; }
+        [Required]
+        public string Ville { get; set; }
+        [Required]
+        public string Age { get; set; }
+        [Required]
+        public string PhoneNumber { get; set; }
+        [Required]
+        [StringLength(100, ErrorMessage = "La chaîne {0} doit comporter au moins {2} caractères.", MinimumLength = 6)]
+        [DataType(DataType.Password)]
+        [Display(Name = "Mot de passe")]
+        public string Password { get; set; }
 
+        [DataType(DataType.Password)]
+        [Display(Name = "Confirmer le mot de passe ")]
+        [Compare("Password", ErrorMessage = "Le mot de passe et le mot de passe de confirmation ne correspondent pas.")]
+        public string ConfirmPassword { get; set; }
+    }
     public class RegisterViewModelChauffeur
     {
         [Required]
