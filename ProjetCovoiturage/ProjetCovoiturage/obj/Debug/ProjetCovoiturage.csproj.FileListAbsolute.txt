@@ -266,3 +266,4 @@ C:\Users\1409770\Documents\GitHub\Tp3-Covoiturage\ProjetCovoiturage\ProjetCovoit
 C:\Users\1409770\Documents\GitHub\Tp3-Covoiturage\ProjetCovoiturage\ProjetCovoiturage\obj\Debug\fr\ProjetCovoiturage.resources.dll
 C:\Users\1409770\Documents\GitHub\Tp3-Covoiturage\ProjetCovoiturage\ProjetCovoiturage\obj\Debug\ProjetCovoiturage.csproj.CopyComplete
 C:\Users\1409770\Documents\GitHub\Tp3-Covoiturage\ProjetCovoiturage\ProjetCovoiturage\obj\Debug\ProjetCovoiturage.dll
+C:\Users\1409770\Documents\GitHub\Tp3-Covoiturage\ProjetCovoiturage\ProjetCovoiturage\obj\Debug\ProjetCovoiturage.csprojAssemblyReference.cache
