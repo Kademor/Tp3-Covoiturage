@@ -13,16 +13,11 @@ namespace ProjetCovoiturage.Models
         public string Prenom { get; set; }
         public string Nom { get; set; }
         public string NumeroPermis { get; set; }
+        public string Email { get; set; }
         public int NumeroTelephone { get; set; }
         public string Ville { get; set; }
         public DateTime DatePermis { get; set; }
         public DateTime DateEmbauche { get; set; }
-        public string VehiculeModel { get; set; }
-        public DateTime DateEnRoute { get; set; }
-        public int NbPlace { get; set; }
-
-        public int voitureID { get; set; }
-
         public virtual ICollection<Voiture> Voiture { get; set; }
         public virtual ICollection<NotesChauffeurs> NotesChauffeurs { get; set; }
     }

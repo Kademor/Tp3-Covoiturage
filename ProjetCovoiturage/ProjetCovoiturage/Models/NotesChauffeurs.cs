@@ -14,7 +14,6 @@ namespace ProjetCovoiturage.Models
         public int noteId { get; set; }
 
         [Required]
-        public int chauffeurId { get; set; }
 
         [Range(0,5)]
         public int notePonctualitée { get; set; }

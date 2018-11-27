@@ -213,6 +213,7 @@
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\NotesChauffeurs.cs" />
     <Compile Include="Models\Trajet.cs" />
     <Compile Include="Models\TrajetHeureDate.cs" />
     <Compile Include="Models\Voiture.cs" />

@@ -14,9 +14,6 @@ namespace ProjetCovoiturage.Models
         public int Id { get; set; }
 
 
-
-        public string IdChauffeur { get; set; }
-        public string IdClient { get; set; }
         // [Display(Name = "VilleDepart", ResourceType = typeof(Resources.Models.Trajet))]
         // [Required(ErrorMessageResourceName = "VilleDepartError", ErrorMessageResourceType = typeof(Resources.Models.Trajet))]
         public string VilleDepart { get; set; }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Security.Claims;
@@ -219,8 +220,10 @@ namespace ProjetCovoiturage.Controllers
                 {
                     var currentUser = UserManager.Users.Where(x => x.Email == model.Email).FirstOrDefault();
                     
-                   
-                    bd.Chauffeur.Add(new Chauffeur { Id = currentUser.Id, Prenom = model.Prenom, Nom = model.Nom, DateEmbauche = model.DateEmbauche, DateEnRoute = model.DateEnRoute, DatePermis = model.DatePermis, NbPlace = model.NbPlace, NumeroPermis = model.NumeroPermis, NumeroTelephone = model.NumeroTelephone, VehiculeModel = model.VehiculeModel, Ville = model.Ville });
+                    Chauffeur chauffeur = new Chauffeur { Email=model.Email,Id = currentUser.Id, Prenom = model.Prenom, Nom = model.Nom, DateEmbauche = model.DateEmbauche, DatePermis = model.DatePermis, NumeroPermis = model.NumeroPermis, NumeroTelephone = model.NumeroTelephone, Ville = model.Ville,Voiture=new List<Voiture>()};
+                    chauffeur.Voiture.Add(new Voiture { nbPlace = model.NbPlace, ModeleVoiture = model.VehiculeModel, dateMiseRoute = model.DateEnRoute });
+                    bd.Chauffeur.Add(chauffeur);
+
                     bd.SaveChanges();
                     var roleManager = new RoleManager<IdentityRole>(new
                    RoleStore<IdentityRole>(new ApplicationDbContext()));
