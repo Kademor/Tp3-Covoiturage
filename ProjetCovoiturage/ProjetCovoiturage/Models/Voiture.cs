@@ -15,7 +15,6 @@ namespace ProjetCovoiturage.Models
 
         public int nbPlace { get; set; }
 
-        public int chauffeurID { get; set; }
 
         public virtual ICollection<Chauffeur> Chauffeurs { get; set; }
     }

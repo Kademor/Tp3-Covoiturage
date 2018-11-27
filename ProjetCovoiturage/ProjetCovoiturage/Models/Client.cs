@@ -32,5 +32,7 @@ namespace ProjetCovoiturage.Models
         [Required]
         [DisplayName("Ville")]
         public string VilleClient { get; set; }
+
+        public virtual Trajet Trajet { get; set; }
     }
 }
