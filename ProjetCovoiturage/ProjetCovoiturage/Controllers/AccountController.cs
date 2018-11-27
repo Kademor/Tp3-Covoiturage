@@ -138,7 +138,64 @@ namespace ProjetCovoiturage.Controllers
                     return View(model);
             }
         }
+        // GET: /Account/Register
+        [AllowAnonymous]
+        public ActionResult RegisterClient()
+        {
+            return View();
+        }
 
+        //
+        // POST: /Account/Register
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> RegisterClient(RegisterViewModelClient model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = new ApplicationUser
+                {
+                    UserName = model.Email,
+                    Email = model.Email,
+                    Lastname = model.Lastname,
+                    Firstname = model.Firstname,
+                    PhoneNumber = model.PhoneNumber,
+                    Age = model.Age,
+                    Ville = model.Ville,
+
+
+                };
+                var result = await UserManager.CreateAsync(user, model.Password);
+                if (result.Succeeded)
+                {
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+
+                    // Pour plus d'informations sur l'activation de la confirmation de compte et de la réinitialisation de mot de passe, visitez https://go.microsoft.com/fwlink/?LinkID=320771
+                    // Envoyer un message électronique avec ce lien
+                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                    // await UserManager.SendEmailAsync(user.Id, "Confirmez votre compte", "Confirmez votre compte en cliquant <a href=\"" + callbackUrl + "\">ici</a>");
+
+                    var roleManager = new RoleManager<IdentityRole>(new
+                   RoleStore<IdentityRole>(new ApplicationDbContext()));
+                    if (!roleManager.RoleExists("Client"))
+                    {
+                        var role = new IdentityRole();
+                        role.Name = "Client";
+                        roleManager.Create(role);
+
+                    }
+                    UserManager.AddToRole(user.Id, "Client");
+
+                    return RedirectToAction("Index", "Home");
+                }
+                AddErrors(result);
+            }
+
+            // Si nous sommes arrivés là, un échec s’est produit. Réafficher le formulaire
+            return View("RegisterClient", model);
+        }
         //
         // GET: /Account/Register
         [AllowAnonymous]
