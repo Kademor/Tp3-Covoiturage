@@ -69,3 +69,7 @@ C:\Users\1523436\Documents\GitHub\Tp3-Covoiturage\ProjetCovoiturage\ProjetCovoit
 C:\Users\1523436\Documents\GitHub\Tp3-Covoiturage\ProjetCovoiturage\ProjetCovoiturage.Tests\obj\Debug\ProjetCovoiturage.Tests.csproj.CoreCompileInputs.cache
 C:\Users\1523436\Documents\GitHub\Tp3-Covoiturage\ProjetCovoiturage\ProjetCovoiturage.Tests\obj\Debug\ProjetCovoiturage.Tests.dll
 C:\Users\1523436\Documents\GitHub\Tp3-Covoiturage\ProjetCovoiturage\ProjetCovoiturage.Tests\obj\Debug\ProjetCovoiturage.Tests.pdb
+C:\Users\1409770\Documents\GitHub\Tp3-Covoiturage\ProjetCovoiturage\ProjetCovoiturage.Tests\obj\Debug\ProjetCovoiturage.Tests.csprojAssemblyReference.cache
+C:\Users\1409770\Documents\GitHub\Tp3-Covoiturage\ProjetCovoiturage\ProjetCovoiturage.Tests\obj\Debug\ProjetCovoiturage.Tests.csproj.CoreCompileInputs.cache
+C:\Users\1409770\Documents\GitHub\Tp3-Covoiturage\ProjetCovoiturage\ProjetCovoiturage.Tests\obj\Debug\ProjetCovoiturage.Tests.dll
+C:\Users\1409770\Documents\GitHub\Tp3-Covoiturage\ProjetCovoiturage\ProjetCovoiturage.Tests\obj\Debug\ProjetCovoiturage.Tests.pdb
