@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="About" xml:space="preserve">
+    <value>Utilisez cette zone pour fournir des informations supplémentaires.</value>
+  </data>
   <data name="Description" xml:space="preserve">
     <value>ASP.NET fait les applications Web en utilisant HTML, CSS and JavaScript.</value>
+  </data>
+  <data name="DescriptionLibrarie" xml:space="preserve">
+    <value>NuGet est une extension gratuite de Visual Studio qui facilite l'ajout, la suppression et la mise à jour de bibliothèques et d'outils dans les projets Visual Studio.</value>
   </data>
   <data name="HomeTitle" xml:space="preserve">
     <value>ASP.NET</value>
@@ -126,7 +132,24 @@
   <data name="More" xml:space="preserve">
     <value>En apprendre plus</value>
   </data>
+  <data name="MoreDescription" xml:space="preserve">
+    <value>ASP.NET MVC vous offre un moyen puissant, basé sur des modèles, de créer des sites Web dynamiques qui
+            permet une séparation nette des problèmes et vous donne un contrôle total sur le balisage
+            pour un développement agréable et agile.</value>
+  </data>
+  <data name="MoreLibrarie" xml:space="preserve">
+    <value>Obtenez plus de bibliothèques</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Commencer</value>
+  </data>
   <data name="Title" xml:space="preserve">
     <value>Page d'accueil</value>
+  </data>
+  <data name="WebDescription" xml:space="preserve">
+    <value>Vous pouvez facilement trouver une société d’hébergement Web qui offre la bonne combinaison de fonctionnalités et de prix pour vos applications.</value>
+  </data>
+  <data name="WebHosting" xml:space="preserve">
+    <value>Hébergement Web</value>
   </data>
 </root>

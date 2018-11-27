@@ -61,11 +61,29 @@ namespace ProjetCovoiturage.Resources.Views {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Use this area to provide additional information..
+        /// </summary>
+        public static string About {
+            get {
+                return ResourceManager.GetString("About", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript..
         /// </summary>
         public static string Description {
             get {
                 return ResourceManager.GetString("Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects..
+        /// </summary>
+        public static string DescriptionLibrarie {
+            get {
+                return ResourceManager.GetString("DescriptionLibrarie", resourceCulture);
             }
         }
         
@@ -88,11 +106,58 @@ namespace ProjetCovoiturage.Resources.Views {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+        ///            enables a clean separation of concerns and gives you full control over markup
+        ///            for enjoyable, agile development..
+        /// </summary>
+        public static string MoreDescription {
+            get {
+                return ResourceManager.GetString("MoreDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Get more libraries.
+        /// </summary>
+        public static string MoreLibrarie {
+            get {
+                return ResourceManager.GetString("MoreLibrarie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Getting started.
+        /// </summary>
+        public static string Start {
+            get {
+                return ResourceManager.GetString("Start", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Home Page.
         /// </summary>
         public static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à You can easily find a web hosting company that offers the right mix of features and price for your applications..
+        /// </summary>
+        public static string WebDescription {
+            get {
+                return ResourceManager.GetString("WebDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Web Hosting.
+        /// </summary>
+        public static string WebHosting {
+            get {
+                return ResourceManager.GetString("WebHosting", resourceCulture);
             }
         }
     }

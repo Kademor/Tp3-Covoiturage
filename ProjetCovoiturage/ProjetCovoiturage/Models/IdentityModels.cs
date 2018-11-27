@@ -40,5 +40,7 @@ namespace ProjetCovoiturage.Models
         public virtual DbSet<Trajet> Trajets { get; set; }
 
         public virtual DbSet<Voiture> Voitures { get; set; }
+
+        public virtual DbSet<NotesChauffeurs> NotesChauffeurs { get; set; }
     }
 }
